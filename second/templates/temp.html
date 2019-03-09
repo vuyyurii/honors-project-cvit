@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Alexa - Meeting Analzer</title>
+
+  <!-- Bootstrap -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/animate.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!--<link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />-->
+  <!-- =======================================================
+    Theme Name: Day
+    Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <header id="header">
+    <nav class="navbar navbar-default navbar-static-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          <div class="navbar-brand">
+            <a href="#"><h1>Meeting - 1</h1></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <div class="menu">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation"><a href="#" class="active">Home</a></li>
+              <li role="presentation"><a href="#" >Images</a></li>
+              <li role="presentation"><a href="#">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+  </header>
+  <!--/header-->
+
+  <div class="gallery">
+    <div class="text-center">
+      <h2>Meeting- 1</h2>
+      <p>List of images</p>
+    </div>
+    <div class="container">
+      {% for meeting in latest_meeting_list %}
+      <div class="col-md-4">
+        <figure id = {{meeting.name}} class="effect-marley">
+          <img src="{% static 'img/8.jpg' %}" alt="" class="img-responsive" />
+          <figcaption>
+            <h4>{{meeting.name}}</h4>
+            <p>Marley tried to convince her but she was not interested.</p>
+          </figcaption>
+        </figure>
+      </div>
+      {% endfor %}
+      </div>
+      <!--<div class="col-md-4">
+        <figure class="effect-marley">
+          <img src="{% static 'img/9.jpg' %}" alt="" class="img-responsive" />
+          <figcaption>
+            <h4>Meeting - 2</h4>
+            <p>Marley tried to convince her but she was not interested.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="effect-marley">
+          <img src="{% static 'img/10.jpg' %}" alt="" class="img-responsive" />
+          <figcaption>
+            <h4>Meeting - 3</h4>
+            <p>Marley tried to convince her but she was not interested.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-4">
+        <figure class="effect-marley">
+          <img src="{% static 'img/11.jpg' %}" alt="" class="img-responsive" />
+          <figcaption>
+            <h4>Meeting - 4</h4>
+            <p>Marley tried to convince her but she was not interested.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="effect-marley">
+          <img src="{% static 'img/12.jpg' %}" alt="" class="img-responsive" />
+          <figcaption>
+            <h4>Meeting - 5</h4>
+            <p>Marley tried to convince her but she was not interested.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <figure class="effect-marley">
+          <img src="{% static 'img/13.jpg' %}" alt="" class="img-responsive" />
+          <figcaption>
+            <h4>Meeting - 6</h4>
+            <p>Marley tried to convince her but she was not interested.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>-->
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!--<script src="js/jquery.js"></script>-->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!--<script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>-->
+
+  <script type="text/javascript">
+    document.getElementById("meeting1").onclick = function () {
+        location.href = "meeting1";
+    };
+</script>
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script>
+    wow = new WOW({}).init();
+  </script>
+
+</body>
+
+</html>

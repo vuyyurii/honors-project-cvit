@@ -1,0 +1,15 @@
+To Run :-
+
+
+1.) Start the server
+
+	python3 server.py      ------------->    (in AlexaMeetingAnalysis/PostProcessing folder)
+
+2.) Set up the Django server
+
+	python3 manage.py makemigrations      ---------------|
+ 	python3 manage.py migrate	      ---------------|---> (in second/ folder
+ 	python3 manage.py runserver           ---------------|
+
+ 	Open the link :- localhost:8000/meetings
+

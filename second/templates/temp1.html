@@ -1,0 +1,9 @@
+{% if latest_meeting_list %}
+    <ul>
+    {% for meeting in latest_meeting_list %}
+        <li><a href="/meetings/{{ question.id }}/">{{ meeting.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
